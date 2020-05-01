@@ -1,5 +1,7 @@
 # TypeGraphQL Description Loader
 
+[![npm version](https://badge.fury.io/js/typegraphql-description-loader.svg)](https://badge.fury.io/js/typegraphql-description-loader)
+
 Webpack loader that takes @typegraphql JSDoc comments and inserts the contents into the decorator (description property in options). TypeGraphQL then takes this comment and applies it to the schema it generates.
 
 This package allows you to comment your code and your GraphQL schema all in one, without duplicating code or missing either out. It is also eye-friendly, in comparison to multi-line strings in Javascript which would require escaping the newline characters. Particularly helpful in resolvers that have lots of methods & require (relatively) long descriptions, which can quickly get messy.
