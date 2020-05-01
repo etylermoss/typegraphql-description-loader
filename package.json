@@ -1,13 +1,13 @@
 {
   "name": "typegraphql-description-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack loader that takes @typegraphql JSDoc comments and inserts the contents into the decorator.",
   "main": "dist/index.js",
   "dependencies": {
+    "ts-morph": "^7.0.3",
     "type-graphql": "^0.17.6"
   },
   "devDependencies": {
-    "ts-morph": "^7.0.3",
     "typescript": "^3.8.3"
   },
   "scripts": {

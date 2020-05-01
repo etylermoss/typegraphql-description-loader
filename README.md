@@ -70,7 +70,7 @@ Then install this package:
 ```shell
 $> npm install typegraphql-description-loader --save-dev
 ```
-Next, use the loader in your Webpack configuration file. TypeGraphQL Description Loader needs to be loaded first, before ts-loader.
+Next, use the loader in your Webpack configuration file. TypeGraphQL Description Loader needs to be loaded first, before ts-loader (loaders are used in reverse order).
 ```js
 module.exports = {
   ...
