@@ -1,0 +1,3 @@
+# Javascript gitignore
+dist/
+node_modules/
