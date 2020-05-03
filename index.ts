@@ -32,7 +32,8 @@ module.exports = function(source: string): string {
 	const classes = sourceFile.getClasses();
 	if (!classes) return sourceFile.getFullText();
 	classes.forEach(targetClass => {
-		const properties = targetClass.getProperties();
+		/* Since Methods and Properties share the relevant / used methods, can use `as any` to ignore warnings */
+		const properties = targetClass.getMethods().concat(targetClass.getProperties() as any);
 		if (!properties) return sourceFile.getFullText();
 		properties.forEach(targetProperty => {
 			const docs = targetProperty.getJsDocs();
