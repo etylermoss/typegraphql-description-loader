@@ -1,8 +1,12 @@
 # TypeGraphQL Description Loader
 
-Webpack loader that takes @typegraphql JSDoc comments and inserts the contents into the decorator (description property in options). TypeGraphQL then takes this comment and applies it to the schema it generates.
+[![npm version](https://badge.fury.io/js/typegraphql-description-loader.svg)](https://badge.fury.io/js/typegraphql-description-loader)
+
+Webpack loader that takes @typegraphql JSDoc comments and inserts the contents into the decorator (description property in options). TypeGraphQL then takes this comment and applies it to the schema it generates. This functionality will possibly be included in the TypeGraphQL reflection plugin, however there is no ETA for this.
 
 This package allows you to comment your code and your GraphQL schema all in one, without duplicating code or missing either out. It is also eye-friendly, in comparison to multi-line strings in Javascript which would require escaping the newline characters. Particularly helpful in resolvers that have lots of methods & require (relatively) long descriptions, which can quickly get messy.
+
+When you use the `@typegraphql` tag in a JSDoc comment, this package will assume that the decorator associated with the comment actually supports the TypeGraphQL AdvancedOptions argument. This means custom decorators are supported, as long as the arguments follow the layout of the official decorators.
 
 ### Turn this:
 ```ts
@@ -86,7 +90,5 @@ module.exports = {
   ...
 };
 ```
-### Limitations
-Currently only TypeGraphQL **class property** decorators are supported by this package. These include `Field`, `Query`, and `Mutation`. I will add support for class declartions themselves soon.
-
-When you use the `@typegraphql` tag in a JSDoc comment, this package will assume that the decorator associated with the comment actually supports the TypeGraphQL AdvancedOptions property (which the description property is contained in).
+### To Do:
+Currently only class property/method decorators are supported by this package, such as `Field`, `Query`, and `Mutation`. I will add support for class declarations themselves soon.
