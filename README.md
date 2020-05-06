@@ -92,3 +92,5 @@ module.exports = {
 ```
 ### To Do:
 Currently only class property/method decorators are supported by this package, such as `Field`, `Query`, and `Mutation`. I will add support for class declarations themselves soon.
+
+Please know that this package was put together quickly for use by me, the code is beyond messy.

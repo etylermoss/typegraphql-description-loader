@@ -51,7 +51,9 @@ module.exports = function(source: string): string {
 			}, '');
 
 			if (!decorators || !description) return sourceFile.getFullText();
-			decorators.forEach(decoratorFull => {
+			decorators.forEach((decoratorFull, index) => {
+
+				if (index !== decorators.length - 1) return;
 
 				const decoratorCore = decoratorFull.getChildAtIndex(1);
 				const decoratorParts = decoratorCore.getChildren();
